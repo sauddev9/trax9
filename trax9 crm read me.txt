@@ -1,0 +1,1337 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="">
+    <head>
+
+        <title>Admin Dashboard - Trax9</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Trax9 CRM - WD" />
+
+        <meta name="author" content="WD" />
+
+
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+<link rel="stylesheet" href="https://crm.click8.co/assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+<link rel="stylesheet" href="https://crm.click8.co/assets/css/font-icons/entypo/css/entypo.css">
+<link rel="stylesheet" href="https://crm.click8.co/assets/css/bootstrap.css">
+<link rel="stylesheet" href="https://crm.click8.co/assets/css/neon-core.css">
+<link rel="stylesheet" href="https://crm.click8.co/assets/css/neon-theme.css">
+<link rel="stylesheet" href="https://crm.click8.co/assets/css/neon-forms.css">
+<link rel="stylesheet" href="https://crm.click8.co/assets/css/custom.css">
+
+
+	<!-- RTL SETTINGS -->
+    
+	<script src="https://crm.click8.co/assets/js/jquery-1.11.0.min.js"></script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="https://crm.click8.co/assets/images/favicon.png">
+    <link rel="stylesheet" href="https://crm.click8.co/assets/css/font-icons/font-awesome/css/font-awesome.min.css">
+    
+	<link rel="stylesheet" href="https://crm.click8.co/assets/js/vertical-timeline/css/component.css">
+    <link rel="stylesheet" href="https://crm.click8.co/assets/js/datatables/responsive/css/datatables.responsive.css">
+
+    <!--Amcharts-->
+<script src="https://crm.click8.co/assets/js/amcharts/amcharts.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/pie.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/serial.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/gauge.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/funnel.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/radar.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/exporting/amexport.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/exporting/rgbcolor.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/exporting/canvg.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/exporting/jspdf.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/exporting/filesaver.js" type="text/javascript"></script>
+<script src="https://crm.click8.co/assets/js/amcharts/exporting/jspdf.plugin.addimage.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://crm.click8.co/assets/js/daterangepicker/daterangepicker-bs3.css">
+
+<link rel="stylesheet" href="https://crm.click8.co/assets/js/selectboxit/jquery.selectBoxIt.css">
+
+<link rel="stylesheet" href="https://crm.click8.co/assets/js/wysihtml5/bootstrap-wysihtml5.css">
+<link rel="stylesheet" href="https://crm.click8.co/assets/js/select2/select2-bootstrap.css">
+<link rel="stylesheet" href="https://crm.click8.co/assets/js/select2/select2.css">
+    </head>
+    <body class="page-body">
+        <div class="page-container  ">
+
+            <div class="sidebar-menu">
+    <header class="logo-env" >
+        <!-- logo collapse icon -->
+        <!-- <div class="sidebar-collapse" style="">
+            <a href="#" class="sidebar-collapse-icon with-animation">
+
+                <i class="entypo-menu"></i>
+            </a>
+        </div> -->
+
+        <!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+        <div class="sidebar-mobile-menu visible-xs">
+            <a href="#" class="with-animation">
+                <i class="entypo-menu"></i>
+            </a>
+        </div>
+    </header>
+
+    <ul id="main-menu" class="">
+        <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+        <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+
+        <div style="text-align: -webkit-center;" id="branding_element">
+            <img src="https://crm.click8.co/assets/logo.png"  style="max-height:35px;"/>
+            <h4 style="color: #a2a3b7;text-align: -webkit-center;margin-bottom: 25px;font-weight: 600;
+            margin-top: 10px; letter-spacing: 4px; font-size: 18px;">
+                Trax9            </h4>
+        </div>
+
+        <!-- SEARCH FORM -->
+        <li id="search">
+            <form action="https://crm.click8.co/index.php/admin/search" onsubmit="return validate()" method="post" accept-charset="utf-8">
+                <input id="search_input" type="text" name="search_key" class="search-input" placeholder="Search ..."/>
+                <button type="submit">
+                    <i class="entypo-search"></i>
+                </button>
+            </form>
+        </li>
+
+        <!-- DASHBOARD -->
+        <li class="active">
+            <a href="https://crm.click8.co/index.php/admin/dashboard">
+                <i class="entypo-gauge"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <!-- MANAGE CLIENTS AND COMPANY -->
+        <li class="">
+            <a href="#">
+                <i class="entypo-trophy"></i>
+                <span>Client</span>
+            </a>
+            <ul>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/client">
+                        <i class="entypo-dot"></i>
+                        <span>Person</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/company">
+                        <i class="entypo-dot"></i>
+                        <span>Company</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- MANAGE TEAM MEMBERS -->
+        <li class="">
+            <a href="#">
+                <i class="entypo-users"></i>
+                <span>Team</span>
+            </a>
+            <ul>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/admins">
+                        <i class="entypo-dot"></i>
+                        <span>Admin</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/staff">
+                        <i class="entypo-dot"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/account_role">
+                        <i class="entypo-dot"></i>
+                        <span>Permission</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- MANAGE CLIENT PROJECTS -->
+
+        <li class="">
+            <a href="#">
+                <i class="entypo-paper-plane"></i>
+                <span>Client Project</span>
+            </a>
+            <ul>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/project">
+                        <i class="entypo-dot"></i>
+                        <span>Project List</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/project_add">
+                        <i class="entypo-dot"></i>
+                        <span>Create Project</span>
+                    </a>
+                </li>
+                <!-- <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/project_quote">
+                        <i class="entypo-dot"></i>
+                        <span>Project Quote</span>
+                    </a>
+                </li> -->
+            </ul>
+        </li>
+
+        <!-- TEAM TASKS -->
+        <li class="">
+            <a href="#">
+                <i class="entypo-traffic-cone"></i>
+                <span>Team Task</span>
+            </a>
+            <ul>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/team_task">
+                        <i class="entypo-list"></i>
+                        <span>Running Tasks</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/team_task_archived">
+                        <i class="entypo-archive"></i>
+                        <span>Archived Tasks</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- CALENDAR -->
+
+        <li class="">
+            <a href="https://crm.click8.co/index.php/admin/calendar">
+                <i class="entypo-calendar"></i>
+                <span>Calendar</span>
+            </a>
+        </li>
+
+        <!-- CALENDAR -->
+
+        <li class="">
+            <a href="https://crm.click8.co/index.php/admin/noticeboard">
+                <i class="entypo-newspaper"></i>
+                <span>Noticeboard</span>
+            </a>
+        </li>
+
+        <!-- MESSAGING -->
+        <li class="">
+            <a href="https://crm.click8.co/index.php/admin/message">
+                <i class="entypo-mail"></i>
+                <span>Message</span>
+            </a>
+        </li>
+
+
+        <!-- NOTE -->
+
+        <li class="">
+            <a href="https://crm.click8.co/index.php/admin/note">
+                <i class="entypo-doc-text"></i>
+                <span>Note</span>
+            </a>
+        </li>
+
+        <!-- ACCOUNTING -->
+
+        <li class="">
+            <a href="#">
+                <i class="entypo-credit-card"></i>
+                <span>Accounting</span>
+            </a>
+            <ul>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/accounting_client_payment">
+                        <i class="entypo-dot"></i>
+                        <span>Client Payment</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/accounting_expense">
+                        <i class="entypo-dot"></i>
+                        <span>Expense Manager</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/accounting_expense_category">
+                        <i class="entypo-dot"></i>
+                        <span>Expense Category</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- REPORTS -->
+
+        <li class="">
+            <a href="https://crm.click8.co/index.php?">
+                <i class="entypo-chart-area"></i>
+                <span>Report</span>
+            </a>
+            <ul>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/report/project">
+                        <i class="entypo-dot"></i>
+                        <span>Project Report</span>
+                    </a>
+                </li>
+                <!-- <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/report/monthly_project">
+                        <i class="entypo-dot"></i>
+                        <span>Monthly Project</span>
+                    </a>
+                </li> -->
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/report/client">
+                        <i class="entypo-dot"></i>
+                        <span>Client Report</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/report/expense">
+                        <i class="entypo-dot"></i>
+                        <span>Expense Report</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/report/income_expense">
+                        <i class="entypo-dot"></i>
+                        <span>Income Expense Comparison</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- SUPPORT TICKET -->
+
+        <li class="">
+            <a href="#">
+                <i class="entypo-lifebuoy"></i>
+                <span>Client Support</span>
+            </a>
+            <ul>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/support_ticket">
+                        <i class="entypo-dot"></i>
+                        <span>Ticket List</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/support_ticket_create">
+                        <i class="entypo-dot"></i>
+                        <span>Create Ticket</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/support_canned_message">
+                        <i class="entypo-dot"></i>
+                        <span>Macro</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+      <!--  <li class="side-nav-item  opened active has-sub ">
+            <a href="javascript: void(0);" class="side-nav-link">
+                <i class="entypo-chart-pie"></i>
+                <span>  </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <ul class="side-nav-second-level" aria-expanded="false">
+                <li class = "" >
+                    <a href="">
+                        <i class="entypo-dot"></i>
+                        <span></a></span>
+                </li>
+                <li class = "" >
+                    <a href="">
+                        <i class="entypo-dot"></i>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+        </li>-->
+
+        <!-- SETTINGS -->
+
+        <li class="">
+            <a href="#">
+                <i class="entypo-tools"></i>
+                <span>Settings</span>
+            </a>
+            <ul>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/system_settings">
+                        <i class="entypo-dot"></i>
+                        <span>System Settings</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/email_settings">
+                        <i class="entypo-dot"></i>
+                        <span>Email Template</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/smtp_settings">
+                        <i class="entypo-dot"></i>
+                        <span>Smtp Settings</span>
+                    </a>
+                </li>
+             <!--   <li class="">
+                    <a href="">
+                        <i class="entypo-dot"></i>
+                        <span></span>
+                    </a>
+                </li>-->
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/manage_language">
+                        <i class="entypo-dot"></i>
+                        <span>Language Settings</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://crm.click8.co/index.php/admin/about">
+                        <i class="entypo-dot"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+<script type="text/javascript">
+    function validate() {
+        var search_string = $('#search_input').val();
+        var search_string_length = search_string.length;
+        if (search_string_length < 2) {
+            toastr.error("Please enter minimum 2 characters", "Error");
+            return false;
+        }
+    }
+</script>
+
+            <div class="main-content">
+
+
+                <div class="row" style="margin-left: 0px; margin-right: 0px;">
+    <!-- SOFTWARE TITLE -->
+    <div class="col-md-12 col-sm-12 clearfix" style="background-color:#ffffff; box-shadow: 0px 10px 30px 0px rgba(82,63,105,0.08); border-radius: 5px;">
+        <ul class="list-inline links-list pull-left" style="padding-top:5px; padding-bottom:0px;">
+            
+            <!-- UNREAD MESSAGES NOTIFICATIONS -->
+            <!-- Message Notifications -->
+            <li class="notifications dropdown tooltip-primary" data-toggle="tooltip" data-original-title="Message"
+                data-placement="right" style="padding: 0px;">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="entypo-mail" style="color: #ccc;"></i>
+                                    </a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <ul class="dropdown-menu-list scroller">
+
+
+                                                    </ul>
+                    </li>
+
+                    <li class="external">
+                        <a href="https://crm.click8.co/index.php/admin/message">
+                            View All Messages                        </a>
+                    </li>
+                </ul>
+
+
+            </li>
+
+
+            <!-- Project status // shown to admin only-->
+                            <li class="notifications dropdown tooltip-primary" data-toggle="tooltip" data-original-title="Running Projects"
+                data-placement="right" style="padding: 0px;">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <i class="entypo-paper-plane" style="color: #ccc;"></i>
+                                                    <span class="badge badge-info" style="background-color: #5d78ff;">1</span>
+                                            </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="top">
+                            <p style="font-size: 14px; font-weight: 500;">Running Projects</p>
+                        </li>
+
+                        <li>
+                            <ul class="dropdown-menu-list scroller">
+
+
+                                                                    <li>
+                                        <a href="https://crm.click8.co/index.php/admin/projectroom/dashboard/a18c39dae3">
+                                            <span class="task">
+                                                <span class="desc">Stickersjhjnjh</span>
+                                                <span class="percent">82%</span>
+                                            </span>
+
+                                            <span class="progress progress-striped active" role="progressbar" >
+                                                <span style="width: 82%;"
+                                                    class="progress-bar progress-bar-info">
+                                                        <span class="sr-only">82% Complete</span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </li>
+
+                        <li class="external">
+                            <a href="https://crm.click8.co/index.php/admin/project">
+                                View All Projects                            </a>
+                        </li>
+                    </ul>
+                </li>
+            
+
+             <!-- timer status shown to admin-->
+                            
+                </ul>
+            </li>
+        </ul>
+
+
+        <!-- Profile Info -->
+        <ul class="user-info pull-right pull-none-xsm" style="padding-top:10px; padding-bottom:0px;">
+            <li class="profile-info dropdown pull-right" style="padding-bottom:0px; margin-top: -5px;"><!-- add class "pull-right" if you want to place this from right -->
+                
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-top: -10px;">
+
+                                            <img src="https://crm.click8.co/uploads/user.jpg" alt="" class="img-circle" width="50" height="50">
+                                        Azfar Memon                    <p style="padding: 0px; text-align: left; margin-left: 60px; margin-top: -16px;">admin</p>
+                </a>
+                
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="https://crm.click8.co/index.php/admin/manage_profile">
+                            <i class="entypo-pencil"></i>
+                            <span>Edit Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://crm.click8.co/index.php/admin/manage_profile">
+                            <i class="entypo-key"></i>
+                            <span>Change Password</span>
+                        </a>
+                    </li>
+                    <!-- Reverse Caret -->
+                    <li class="caret"></li>
+                    <li>
+                        <a href="https://crm.click8.co/index.php/login/logout">
+                            <i class="entypo-logout"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        
+        </ul>
+
+        <ul class="list-inline links-list pull-right" style="padding-top:10px; padding-bottom:0px;">
+            <!-- RIGHT BAR TOGGLE BUTTON ICON-->
+            <li class="notifications dropdown tooltip-primary" data-toggle="tooltip" data-original-title="To Do"
+                data-placement="left" style="padding: 0px;">
+                <a href="#" class="dropdown-toggle"  data-toggle="chat"
+                   style="display:block;" >
+                    <i class="entypo-menu" style="color: #ccc;"></i>
+                    <span id="incomplete_todo_number">
+                                            </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<hr style="margin-top:0px;" />
+
+<script type="text/javascript">
+
+
+            </script>
+
+                <h3 style="margin:20px 0px; color:#818da1; font-weight:200;">
+                    <i class="entypo-right-circled"></i>
+                    Admin Dashboard                </h3>
+
+                
+<div class="row">
+
+	<div class="col-sm-3">
+		<div class="tile-title tile-blue">
+			<div class="icon">
+				<i class="entypo-thumbs-up" style="font-size:40px;"></i>
+			</div>
+			<div class="title">
+				<h3 style="font-weight:400;">3 Total Client</h3>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="tile-title tile-cyan">
+			<div class="icon">
+				<i class="entypo-user" style="font-size:40px;"></i>
+			</div>
+			<div class="title">
+				<h3 style="font-weight:400;">1 Team Member</h3>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="tile-title tile-orange">
+			<div class="icon">
+				<i class="entypo-credit-card" style="font-size:40px;"></i>
+			</div>
+			<div class="title">
+				<h3 style="font-weight:400;">1					Pending Invoice</h3>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="tile-title tile-red">
+			<div class="icon">
+				<i class="entypo-bell" style="font-size:40px;"></i>
+			</div>
+			<div class="title">
+				<h3 style="font-weight:400;">1					 Opened Support Ticket</h3>
+				<p></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+
+	<!-- stats-->
+	<div class="col-sm-4">
+
+		<div class="tile-stats tile-white tile-white-primary" style="padding:30px 20px; box-shadow: 0 0 13px 0 rgba(82,63,105,.05);">
+			<div class="icon" style="bottom:40px;"><i class="entypo-paper-plane"></i></div>
+			<div class="num" data-start="0" data-end="1 "
+				data-duration="500" data-delay="0" style="font-weight:200;"></div>
+			<h3 style="font-weight:400; font-size: 14px;">Running Project</h3>
+		</div>
+		<div class="tile-stats tile-white tile-white-primary" style="padding:30px 20px; box-shadow: 0 0 13px 0 rgba(82,63,105,.05);">
+			<div class="icon" style="bottom:40px;"><i class="entypo-megaphone"></i></div>
+			<div class="num" data-start="0" data-end="1"
+				data-duration="500" data-delay="0" style="font-weight:200;"></div>
+			<h3 style="font-weight:400; font-size: 14px;">Pending Team Task</h3>
+		</div>
+	</div>
+	<!-- charts-->
+
+	<div class="col-sm-8">
+
+		<div class="panel panel-primary" id="charts_env">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<i class="entypo-chart-bar"></i>
+					Income Graph (last 30 days)
+				</div>
+			</div>
+
+			<div class="panel-body" >
+				<div id="bar_chartdiv" style="width: 100%; height: 200px;"></div>
+				<center>Projects</center>
+				<!--<div id="line-chart-demo" class="morrischart" style="height: 200px"></div>-->
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+
+<script>
+var chart = AmCharts.makeChart("bar_chartdiv", {
+    "theme": "none",
+    "type": "serial",
+	"startDuration": 2,
+    "dataProvider": [
+		],
+    "graphs": [{
+        "balloonText": "[[category]]: <b>[[value]]</b>",
+        "colorField": "color",
+        "fillAlphas": 1,
+        "lineAlpha": 0.1,
+        "type": "column",
+        "valueField": "amount"
+    }],
+    "depth3D": 0,
+	"angle": 20,
+    "chartCursor": {
+        "categoryBalloonEnabled": false,
+        "cursorAlpha": 0,
+        "zoomable": false
+    },
+    "categoryField": "project",
+    "categoryAxis": {
+        "gridPosition": "start",
+        "labelRotation": 30
+    },
+	"pathToImages"	: "https://crm.click8.co/assets/js/amcharts/images/",
+	"amExport": {
+					"top": 0,
+                    "right": 0,
+                    "buttonColor": '#EFEFEF',
+                    "buttonRollOverColor":'#DDDDDD',
+					"imageFileName"	: "Project Report",
+                    "exportPNG":true,
+                    "exportJPG":true,
+                    "exportPDF":true,
+                    "exportSVG":true
+	}
+});
+
+var chart = AmCharts.makeChart("chartdiv",{
+	"type"			: "pie",
+	"titleField"	: "report_type",
+	"valueField"	: "amount",
+	"innerRadius"	: "40%",
+	"angle"			: "0",
+	"depth3D"		: 0,
+	"pathToImages"	: "https://crm.click8.co/assets/js/amcharts/images/",
+	"amExport": {
+					"top": 0,
+                    "right": 0,
+                    "buttonColor": '#EFEFEF',
+                    "buttonRollOverColor":'#DDDDDD',
+					"imageFileName"	: "Project Report",
+                    "exportPNG":true,
+                    "exportJPG":true,
+                    "exportPDF":true,
+                    "exportSVG":true
+	},
+	"dataProvider"	: [
+
+		{
+			"report_type": "Expense",
+			"amount": 0		},
+		{
+			"report_type": "Income",
+			"amount": 0		},
+	]
+});
+</script>
+<div class="row">
+
+	<!-- INCOME-EXPENSE COMPARISON CHART -->
+	<div class="col-sm-6">
+        <div class="panel panel-primary" id="charts_env">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<i class="entypo-chart-pie"></i>
+					Income Expense Comparison (this month)
+				</div>
+
+			</div>
+
+			<div class="panel-body" >
+				<div id="chartdiv" style="width:100%; height:310px;"></div>
+				<!--<div id="line-chart-demo" class="morrischart" style="height: 200px"></div>-->
+			</div>
+		</div>
+	</div>
+
+	<!-- EVENT CALENDAR OF CURRENT MONTH -->
+	<div class="col-sm-6">
+        <div class="panel panel-primary " data-collapsed="0">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <i class="fa fa-calendar"></i>
+                    Event Calendar (this month)
+                </div>
+            </div>
+            <div class="panel-body" style="padding:0px;">
+                <div class="calendar-env">
+                    <div class="calendar-body">
+                        <div id="event_calendar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<i class="glyphicon glyphicon-bullhorn"></i> &nbsp; <b>Noticeboard</b>
+				</div>
+			</div>
+			<div class="panel-body with-table">
+				<table class="table table-responsive">
+					<thead>
+						<tr>
+							<th>Notice</th>
+							<th>Published By</th>
+							<th>Date Added</th>
+						</tr>
+					</thead>
+					<tbody>
+											</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<script>
+  $(document).ready(function() {
+
+		var calendar = $('#event_calendar');
+
+		calendar.fullCalendar({
+			header: {
+				left: '',
+				right: ''
+			},
+
+			//defaultView: 'basicWeek',
+
+			editable: false,
+			firstDay: 0,
+			height: 300,
+			droppable: false,
+
+			events:
+	        [
+	            	        ],
+
+
+			drop: function(date, allDay) {
+
+				var $this = $(this),
+					eventObject = {
+						title: $this.text(),
+						start: date,
+						allDay: allDay,
+						className: $this.data('event-class')
+					};
+
+				calendar.fullCalendar('renderEvent', eventObject, true);
+
+				$this.remove();
+			}
+		});
+
+	});
+  </script>
+
+<style type="text/css">
+	.calendar-env .calendar-body .fc-header .fc-header-right {
+   padding: 0px;
+  text-align: right;
+}
+.calendar-env .calendar-body .fc-header .fc-header-left {
+  padding: 0px;
+}
+</style>
+
+                <!-- Footer -->
+<footer class="main">
+	Trax9 |
+	<a href="http://trax9.com"
+    	target="_blank">Trax9</a>
+</footer>
+
+            </div>
+            <div id="chat_area">
+                <span class="todo_data">
+    
+<div id="chat" class="fixed">
+
+    <div class="chat-inner">
+        <a href="#" class="dropdown-toggle" data-collapse-sidebar="1"  data-toggle="chat" 
+            style="display:block;margin-right: 20px;margin-top: 15px;float: right;" >
+            <i class="fa fa-times" style="color: #595f6c;"></i>
+            <!-- <span id="incomplete_todo_number">
+                            </span> -->
+        </a>
+        <!-- Amchart Clock 
+        <div id="chartdiv" style="width:250px; height:250px;"></div>
+        -->
+
+        <h3 style="color: #a2a5b9;font-weight: 100;text-align: center;margin-top: 50px;margin-bottom: 30px;">
+            <span style="font-size: 15px;">
+                Wednesday,            </span>
+            
+            <br />
+            <span style="font-size: 18px;">
+                4th September            </span>
+        </h3>
+        <h3 style="color: #fff;background-color: #595d6e;font-size: 12px;padding: 5px; font-weight:200;">
+
+            <i class="entypo-list"></i>
+            To do list
+        </h3>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <form action="https://crm.click8.co/index.php/admin/todo/add" class = "form-horizontal form-groups validate todo-add" enctype = "multipart/form-data" method = "post">
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <input class="form-control" type="text" name="title" id="title" placeholder="+ Add todo list" 
+                                style="background-color: #272C36;border: 1px solid #2f3541;color: rgba(170,170,170 ,1); "
+                                    data-validate="required" autocomplete="off"/>
+                        </div>
+                        <input type="submit" value="" class="btn btn-primary btn-xs" onclick="test()" style="display: none;" />
+                    </div>                    
+                </form>
+            </div>
+            <table style="width: 83%;margin-left: 22px;" id="todo_list">
+                            </table>
+        </div>
+        <h3 style="color: #fff;background-color: #595d6e;font-size: 12px;padding: 5px; font-weight:200;">
+
+            <i class="entypo-doc-text"></i>
+            Calculator
+        </h3>
+        <!-- calculator-->
+        <div class="col-sm-12">
+            <style>
+                .calculator_button{
+                    border: 1px solid #5A606C !important;
+                    width: 99%;
+                    background-color: #5A606C !important;
+                    color: #F5FAFC;
+                    cursor:auto;
+                    border-radius: 0px;
+                    margin: 0.5px;
+                }
+                .calculator_button:hover{
+                    border : 1px solid #757e8e !important;
+                    background-color: #757e8e !important;
+                    color: #F5FAFC;
+                }
+                .calculator_button:focus{
+                    border : 1px solid #303641;
+                    background-color: #5A606C;
+                    color: #F5FAFC;
+                }
+            </style>    
+            <form name="form1" onsubmit="return false" 
+                style="border: 1px solid #404856;padding-right: 1px;padding-bottom:1px;border-radius: 10px 10px 0px 0px; margin-top: 20px;">
+            <table style="width: 100%;">
+                <tr>
+                    <td colspan="4">
+                        <input type="text" id="display" 
+                            style="width:100%;border:0px;background-color: #2f3541 !important;text-align: right;font-size: 24px;font-weight: 100;margin-bottom: 0px;padding-right:10px;color: #F5FAFC !important;" 
+                                readonly placeholder="0" value="" /></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><button type="button" class="btn btn-default calculator_button" style="width:99.99%;"  onclick="reset()">Clear</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn`-default calculator_button" onclick="displaynum(7)">7</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(8)" >8</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(9)" >9</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="operator(&quot;+&quot;)" style="background-color: #FDA82F !important; border-color: #FDA82F !important;">+</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(4)">4</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(5)" >5</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(6)" >6</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="operator(&quot;-&quot;)" style="background-color: #FDA82F !important; border-color: #FDA82F !important;">-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(1)">1</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(2)" >2</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(3)" >3</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="operator(&quot;*&quot;)" style="background-color: #FDA82F !important; border-color: #FDA82F !important;">&times;</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(0)">0</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="displaynum(&quot;.&quot;)" >.</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="equals()" >=</button></td>
+                    <td><button type="button" class="btn btn-default calculator_button" onclick="operator(&quot;/&quot;)" style="background-color: #FDA82F !important; border-color: #FDA82F !important;">&divide;</button></td>
+                </tr>
+            </table>
+            </form>
+
+
+            
+        </div>        
+    </div>
+    
+</div>
+
+
+<script src="assets/js/calculator.js"></script>
+
+
+<script>
+    // Amchart clock function start here.        
+    var chart = AmCharts.makeChart("clock_div", {
+        "type": "gauge",
+        "theme": "light",
+        "startDuration": 0.3,
+        "marginTop":10,
+        "marginBottom":10,
+        "faceAlpha" : 1,
+        "faceColor" : "#ffffff",
+        "faceBorderAlpha" : 1,
+        "faceBorderColor" : "#000000",
+        "faceBorderWidth" : 3,
+        "color" : "#000000",
+        "axes": [{
+            "axisAlpha": 0.3,
+            "endAngle": 360,
+            "endValue": 12,
+            "minorTickInterval": 0.2,
+            "showFirstLabel": false,
+            "startAngle": 0,
+            "axisThickness": 1,
+            "valueInterval": 1
+        }],
+        "arrows": [{
+            "radius": "50%",
+            "innerRadius": 0,
+            "clockWiseOnly": true,
+            "nailRadius":10,
+            "nailAlpha": 1
+        }, {
+            "nailRadius": 0,
+            "radius": "80%",
+            "startWidth": 6,
+            "innerRadius": 0,
+            "clockWiseOnly": true
+        }, {
+            "color": "#CC0000",
+            "nailRadius": 4,
+            "startWidth": 3,
+            "innerRadius": 0,
+            "clockWiseOnly": true,
+            "nailAlpha": 1
+        }]
+    });
+    
+    // update each second
+    $( document ).ready(function() {
+        //setInterval(updateClock, 1000);
+    });
+
+
+    // update clock
+    function updateClock() {
+        // get current date
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+
+        // set hours
+        chart.arrows[0].setValue(hours + minutes / 60);
+        // set minutes
+        chart.arrows[1].setValue(12 * (minutes + seconds / 60) / 60);
+        // set seconds
+        chart.arrows[2].setValue(12 * date.getSeconds() / 60);
+    }
+
+// Custom functions for todo starts here.
+    
+        var options = {
+            beforeSubmit: validate_todo_add,
+            success: show_response_todo_add,
+            resetForm: true
+        };
+
+        $('.todo-add').submit(function () {
+            $(this).ajaxSubmit(options);
+            return false;
+        });
+    
+    function validate_todo_add(formData, jqForm, options) {
+
+        if (!jqForm[0].title.value)
+        {
+            return false;
+        }
+    }
+
+    function show_response_todo_add(responseText, statusText, xhr, $form) {
+        reload_todo_body();
+    }
+
+    function reload_todo_body()
+    {
+
+        $.ajax({
+            url: 'https://crm.click8.co/index.php/admin/todo/reload',
+            success: function (response)
+            {
+                jQuery('#todo_list').html(response);
+            }
+        });
+
+        $.ajax({
+            url: 'https://crm.click8.co/index.php/admin/todo/reload_incomplete_todo',
+            success: function (response)
+            {
+                jQuery('#incomplete_todo_number').html(response);
+            }
+        });
+
+    }
+    
+    function mark_as_done(todo_id)
+    {
+        $.ajax({
+            url: 'https://crm.click8.co/index.php/admin/todo/mark_as_done/' + todo_id,
+            success: function ()
+            {
+                reload_todo_body();
+            }
+        });
+    }
+    
+    function mark_as_undone(todo_id)
+    {
+        $.ajax({
+            url: 'https://crm.click8.co/index.php/admin/todo/mark_as_undone/' + todo_id,
+            success: function ()
+            {
+                reload_todo_body();
+            }
+        });
+    }
+    
+    function delete_todo(todo_id)
+    {
+        $.ajax({
+            url: 'https://crm.click8.co/index.php/admin/todo/delete/' + todo_id,
+            success: function ()
+            {
+                reload_todo_body();
+            }
+        });
+    }
+    
+    function swap(swap_with, todo_id)
+    {
+        $.ajax({
+            url: 'https://crm.click8.co/index.php/admin/todo/swap/' + todo_id + '/' + swap_with,
+            success: function ()
+            {
+                reload_todo_body();
+            }
+        });
+    }
+    // Custom functions for todo ends here.
+</script>
+<!-- calling ajax form submission plugin for specific form -->
+<script src="https://crm.click8.co/assets/js/ajax-form-submission.js"></script>
+</span>
+
+
+<script>
+	function start_clock() {
+	    //setInterval(updateClock, 1000);
+	    
+	}    
+</script>            </div>
+        </div>
+            <script type="text/javascript">
+	function showAjaxModal(url)
+	{
+		// SHOWING AJAX PRELOADER IMAGE
+		jQuery('#modal_ajax .modal-body').html('<div style="text-align:center;margin-top:200px;"><img src="'+'https://crm.click8.co/'+'/assets/images/preloader.gif" style="height:25px;" /></div>');
+		
+		// LOADING THE AJAX MODAL
+		jQuery('#modal_ajax').modal('show', {backdrop: 'true'});
+		
+		// SHOW AJAX RESPONSE ON REQUEST SUCCESS
+		$.ajax({
+			url: url,
+			success: function(response)
+			{
+				jQuery('#modal_ajax .modal-body').html(response);
+                //location.reload();
+			}
+		});
+	}
+	</script>
+    
+    <!-- (Ajax Modal)-->
+    <div class="modal fade" id="modal_ajax">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Trax9 CRM</h4>
+                </div>
+                
+                <div class="modal-body" style="height:500px; overflow:auto;">
+                
+                    
+                    
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <script type="text/javascript">
+	function confirm_modal(delete_url , post_refresh_url)
+	{
+
+		$('#preloader-delete').html('');
+		jQuery('#modal_delete').modal('show', {backdrop: 'static'});
+		document.getElementById('delete_link').setAttribute("onClick" , "delete_data('" + delete_url + "' , '" + post_refresh_url + "')" );
+		document.getElementById('delete_link').focus();
+        //location.reload();
+	}
+	</script>
+    
+    <!-- (Normal Modal)-->
+    <div class="modal fade" id="modal_delete">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin-top:100px;">
+                
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" style="text-align:center;">Are you sure to delete this information ?</h4>
+                </div>
+                
+                
+                <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
+                	  <button type="button" class="btn btn-danger" id="delete_link" onClick="">Delete</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal" id="delete_cancel_link">Cancel</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+    function confirm_modal_hard_reload(delete_url)
+    {
+        jQuery('#hard_reload_modal').modal('show', {backdrop: 'static'});
+        document.getElementById('hard_delete_link').setAttribute('href' , delete_url);
+        //location.reload();
+    }
+    </script>
+    
+    <!-- (Normal Modal)-->
+    <div class="modal fade" id="hard_reload_modal">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin-top:100px;">
+                
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" style="text-align:center;">Are you sure to delete this information ?</h4>
+                </div>
+                
+                
+                <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
+                    <a href="#" class="btn btn-danger" id="hard_delete_link">Delete</a>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <!-- Bottom Scripts -->
+<script src="https://crm.click8.co/assets/js/gsap/main-gsap.js"></script>
+<script src="https://crm.click8.co/assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+<script src="https://crm.click8.co/assets/js/bootstrap.js"></script>
+<script src="https://crm.click8.co/assets/js/joinable.js"></script>
+<script src="https://crm.click8.co/assets/js/resizeable.js"></script>
+<script src="https://crm.click8.co/assets/js/neon-api.js"></script>
+<script src="https://crm.click8.co/assets/js/bootstrap-switch.min.js"></script>
+<script src="https://crm.click8.co/assets/js/raphael-min.js"></script>
+<script src="https://crm.click8.co/assets/js/morris.min.js"></script>
+<script src="https://crm.click8.co/assets/js/toastr.js"></script>
+<script src="https://crm.click8.co/assets/js/jquery.validate.min.js"></script>
+<script src="https://crm.click8.co/assets/js/fullcalendar/fullcalendar.min.js"></script>
+<script src="https://crm.click8.co/assets/js/bootstrap-datepicker.js"></script>
+<script src="https://crm.click8.co/assets/js/fileinput.js"></script>
+<script src="https://crm.click8.co/assets/js/wysihtml5/wysihtml5-0.4.0pre.min.js"></script>
+<script src="https://crm.click8.co/assets/js/wysihtml5/bootstrap-wysihtml5.js"></script>
+<script src="https://crm.click8.co/assets/js/jquery.multi-select.js"></script>
+<script src="https://crm.click8.co/assets/js/jquery.knob.js"></script>
+<script src="https://crm.click8.co/assets/js/selectboxit/jquery.selectBoxIt.min.js"></script>
+<script src="https://crm.click8.co/assets/js/jquery.inputmask.bundle.min.js"></script>
+<script src="https://crm.click8.co/assets/js/daterangepicker/moment.min.js"></script>
+<script src="https://crm.click8.co/assets/js/daterangepicker/daterangepicker.js"></script>
+
+<link rel="stylesheet" href="https://crm.click8.co/assets/js/dropzone/dropzone.css">
+<script src="https://crm.click8.co/assets/js/dropzone/dropzone.js"></script>
+
+<script src="https://crm.click8.co/assets/js/jquery.dataTables.min.js"></script>
+<script src="https://crm.click8.co/assets/js/datatables/TableTools.min.js"></script>
+<script src="https://crm.click8.co/assets/js/dataTables.bootstrap.js"></script>
+<script src="https://crm.click8.co/assets/js/datatables/jquery.dataTables.columnFilter.js"></script>
+<script src="https://crm.click8.co/assets/js/datatables/lodash.min.js"></script>
+<script src="https://crm.click8.co/assets/js/datatables/responsive/js/datatables.responsive.js"></script>
+<script src="https://crm.click8.co/assets/js/select2/select2.min.js"></script>
+<script src="https://crm.click8.co/assets/js/bootstrap-colorpicker.min.js"></script>
+
+<script src="https://crm.click8.co/assets/js/neon-calendar.js"></script>
+<script src="https://crm.click8.co/assets/js/neon-chat.js"></script>
+<script src="https://crm.click8.co/assets/js/neon-custom.js"></script>
+<script src="https://crm.click8.co/assets/js/neon-demo.js"></script>
+<script src="https://crm.click8.co/assets/js/neon-custom-ajax.js"></script>
+<script src="https://crm.click8.co/assets/js/neon-notes.js"></script>
+<script src="https://crm.click8.co/assets/js/jquery.form.js"></script>
+<script src="https://crm.click8.co/assets/js/calculator.js"></script>
+
+<script type="text/javascript">
+    $(".email_template_editors").wysihtml5();
+</script>
+
+<script>
+	
+</script>
+
+
+
+    </body>
+</html>
